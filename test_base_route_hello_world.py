@@ -90,3 +90,9 @@ def test_if_text_displayed(driver):
     driver.get("http://localhost:5000")
     my_text = driver.find_element(By.CSS_SELECTOR, "body").text
     assert "Welcome to the Application with updated code!" == my_text
+
+
+def test_if_text_displayed_sub(driver):
+    driver.get("http://localhost:5000/stub")
+    my_text = driver.find_element(By.CSS_SELECTOR, "body").text
+    assert "Value of Stub: 200" == my_text
